@@ -1,14 +1,10 @@
 package com.example.azimutlab.dagger
 
 import android.os.Bundle
-import com.example.azimutlab.AzimutApp
-import com.example.azimutlab.dagger.components.DaggerServiceComponent
 import com.example.azimutlab.dagger.modules.BaseScreen
 import javax.inject.Inject
 
-class SberScreen @Inject constructor(
-
-) : BaseScreen() {
+class SberScreen  : BaseScreen() {
     companion object {
         fun getScreen(someId: Int): BaseScreen = SberScreen()
     }

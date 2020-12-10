@@ -5,12 +5,12 @@ import dagger.Module
 import dagger.Provides
 import retrofit2.Retrofit
 
-@Module
-class ServiceModule {
-
-    @Provides
-    fun getApiService(retrofit: Retrofit): ApiService {
-        return retrofit.create(ApiService::class.java)
-    }
-
-}
+//@Module
+//class ServiceModule {
+//
+//    @Provides
+//    fun getApiService(retrofit: Retrofit): ApiService {
+//        return retrofit.create(ApiService::class.java)
+//    }
+//
+//}

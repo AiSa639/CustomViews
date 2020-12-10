@@ -6,14 +6,14 @@ import com.example.azimutlab.mvvm.repository.MainRepositoryImpl
 import dagger.Module
 import dagger.Provides
 
-@Module
-class RepositoryModules {
-
-//    @Provides
-//    fun provideMainRepository(apiService: ApiService, sharedPreferences: SharedPreferences): MainRepositoryImpl {
-//        return MainRepositoryImpl(apiService, sharedPreferences)
-//    }
-
-
-
-}
+//@Module
+//class RepositoryModules {
+//
+////    @Provides
+////    fun provideMainRepository(apiService: ApiService, sharedPreferences: SharedPreferences): MainRepositoryImpl {
+////        return MainRepositoryImpl(apiService, sharedPreferences)
+////    }
+//
+//
+//
+//}

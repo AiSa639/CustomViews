@@ -6,7 +6,49 @@
     android:layout_height="match_parent"
     tools:context=".mvvm.view.activities.MainActivity">
 
+    <com.example.azimutlab.widgets_taiyr.CardCustomSber
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="20dp"
+        app:cardImage="@drawable/ic_card_2"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/sberCardOne"/>
+
+    <com.example.azimutlab.widgets_taiyr.CardCustomSber
+        android:id="@+id/sberCardTwo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        app:additionalInfo="** 4848 * кредитная"
+        app:cardImage="@drawable/ic_card_2"
+        app:hasArrow="true"
+        app:hasDivider="true"
+        app:hasError="true"
+        app:errorColor="@color/warningColor"
+        app:errorTitle="С этого счета списывается ежемесячный платеж за ваш кредит. Необходимо снова пополнить его"
+        app:hasHintTitle="true"
+        app:hintTitle="Card title"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sberCardOne"
+        app:moneySum="22444"
+        app:titleCard="VISA" />
+
+
+    <com.example.azimutlab.widgets_taiyr.CardCustomSber
+        android:id="@+id/sberCardHint"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardImage="@drawable/ic_card_2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sberCardTwo" />
+
     <Button
+        android:visibility="gone"
         android:id="@+id/launch"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

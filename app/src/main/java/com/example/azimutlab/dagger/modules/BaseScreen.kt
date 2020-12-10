@@ -1,8 +1,8 @@
 package com.example.azimutlab.dagger.modules
+//
+//import javax.inject.Inject
 
-import javax.inject.Inject
 
-
-open class BaseScreen @Inject constructor(){
+open class BaseScreen  constructor(){
 
 }

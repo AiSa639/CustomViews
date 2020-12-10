@@ -4,12 +4,6 @@ import android.app.Activity
 import android.app.Application
 import androidx.multidex.MultiDexApplication
 import com.example.azimutlab.Constants.BASE_URL
-import com.example.azimutlab.dagger.components.AppComponent
-import com.example.azimutlab.dagger.components.DaggerAppComponent
-import com.example.azimutlab.dagger.components.DaggerServiceComponent
-import com.example.azimutlab.dagger.components.ServiceComponent
-import com.example.azimutlab.dagger.modules.AppModule
-import com.example.azimutlab.dagger.modules.ServiceModule
 import com.example.azimutlab.koin.appModule
 import com.example.azimutlab.koin.repoModule
 import com.example.azimutlab.koin.viewModelModule
@@ -27,22 +21,18 @@ class AzimutApp : MultiDexApplication() {
             return activity.application as AzimutApp
         }
 
-        lateinit var appComponent: AppComponent
-        lateinit var serviceComponent: ServiceComponent
 
         //koin for inject
         lateinit var koinTest: Koin
 
-        fun getApplicationComponent(): AppComponent {
-            return appComponent
-        }
+
 
     }
 
     override fun onCreate() {
         super.onCreate()
-        createAppComponent()
-        createServiceComponent()
+//        createAppComponent()
+//        createServiceComponent()
         //create koin for injection
         koinTest = startKoin {
             androidContext(this@AzimutApp)
@@ -50,18 +40,18 @@ class AzimutApp : MultiDexApplication() {
         }.koin
     }
 
-    private fun createAppComponent() {
-        appComponent = DaggerAppComponent
-            .builder()
-            .appModule(AppModule(this, BASE_URL))
-            .build()
-    }
-
-    private fun createServiceComponent() {
-        serviceComponent = DaggerServiceComponent
-            .builder()
-            .appComponent(appComponent)
-            .build()
-    }
+//    private fun createAppComponent() {
+//        appComponent = DaggerAppComponent
+//            .builder()
+//            .appModule(AppModule(this, BASE_URL))
+//            .build()
+//    }
+//
+//    private fun createServiceComponent() {
+//        serviceComponent = DaggerServiceComponent
+//            .builder()
+//            .appComponent(appComponent)
+//            .build()
+//    }
 
 }

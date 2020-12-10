@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="CardCustomSber">
+        <attr name="titleCard" format="reference|string"/>
+        <attr name="additionalInfo" format="reference|string"/>
+        <attr name="moneySum" format="reference|string"/>
+
+        <attr name="hasHintTitle" format="boolean"/>
+        <attr name="hintTitle" format="reference|string"/>
+
+        <attr name="hasError" format="boolean"/>
+        <attr name="errorTitle" format="reference|string"/>
+        <attr name="errorColor" format="color|reference"/>
+
+        <attr name="hasDivider" format="boolean"/>
+        <attr name="hasArrow" format="boolean"/>
+
+        <attr name="cardImage" format="reference"/>
+    </declare-styleable>
+
+</resources>

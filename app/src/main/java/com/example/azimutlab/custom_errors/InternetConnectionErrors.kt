@@ -5,15 +5,15 @@ import com.example.azimutlab.R
 import java.io.IOException
 
 class NoConnectivityException : IOException() {
-    val context = AzimutApp.getApplicationComponent().getContext()
+    //val context = AzimutApp.getApplicationComponent().getContext()
     override val message: String
         get() =
-            context.getString(R.string.no_network_available)
+            "dfdfdf"
 }
 
 class NoInternetException() : IOException() {
-    val context = AzimutApp.getApplicationComponent().getContext()
+    //val context = AzimutApp.getApplicationComponent().getContext()
     override val message: String
         get() =
-            context.getString(R.string.check_connected_wifi)
+            "sdsdsdsd"
 }
