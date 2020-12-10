@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="CurrencyView">
+        <attr name="currencyType" format="string"/>
+        <attr name="isMultiCurrency" format="boolean"/>
+        <attr name="android:text"/>
+
+    </declare-styleable>
+
+    <declare-styleable name="BannerView">
+        <attr name="imagePath" format="string"/>
+        <attr name="bannerTitle" format="string"/>
+        <attr name="bannerDescription" format="string"/>
+    </declare-styleable>
+</resources>

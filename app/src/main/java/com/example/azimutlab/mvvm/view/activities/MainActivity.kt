@@ -6,21 +6,18 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.*
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.azimutlab.AzimutApp
 import com.example.azimutlab.R
 import com.example.azimutlab.adapters.DataListAdapter
-import com.example.azimutlab.dagger.components.DaggerServiceComponent
 import com.example.azimutlab.helpers.toast
 import com.example.azimutlab.hide
 import com.example.azimutlab.mvvm.models.PostModel
-import com.example.azimutlab.mvvm.viewmodels.MainViewModel
 import com.example.azimutlab.mvvm.viewmodels.ViewModelTestKoin
 import com.example.azimutlab.show
+import com.example.azimutlab.widgets.BannerView
+import com.example.azimutlab.widgets.CurrencyView
 import kotlinx.android.synthetic.main.activity_main.*
 import org.koin.android.ext.android.inject
-import org.koin.android.viewmodel.compat.ScopeCompat.viewModel
 import org.koin.android.viewmodel.ext.android.viewModel
-import javax.inject.Inject
 
 class MainActivity : AppCompatActivity(), LifecycleOwner {
 
@@ -32,6 +29,9 @@ class MainActivity : AppCompatActivity(), LifecycleOwner {
 
     private var adapter = DataListAdapter()
     lateinit var recyclerView:RecyclerView
+
+    private lateinit var currencyState: CurrencyView
+    private lateinit var bannerView: BannerView
 //    init {
 //        DaggerServiceComponent.builder()
 //            .appComponent(AzimutApp.appComponent)
@@ -53,6 +53,18 @@ class MainActivity : AppCompatActivity(), LifecycleOwner {
             launch.hide()
             getList()
         }
+
+        currencyState = findViewById(R.id.currency)
+        bannerView = findViewById(R.id.banner_view)
+
+        currencyState.isMultiCurrency = true
+        currencyState.currencyType = "〒"
+
+        bannerView.bannerDescription = "До 1 200 000 ₽\u2028на любые цели"
+        bannerView.bannerTitle = "Кредит"
+        bannerView.imagePath = "https://cis.visa.com/dam/VCOM/regional/ap/taiwan/global-elements/images/tw-visa-gold-card-498x280.png"
+
+
     }
 
     override fun onPause() {

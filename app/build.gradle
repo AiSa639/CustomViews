@@ -107,4 +107,7 @@ dependencies {
     implementation "org.koin:koin-test:2.2.1"
 
     implementation 'com.android.support:multidex:1.0.3'
+
+    implementation 'com.squareup.picasso:picasso:2.71828'
+
 }
