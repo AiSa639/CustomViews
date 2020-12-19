@@ -1,7 +1,6 @@
 package com.example.azimutlab.mvvm.view.activities
 
 import android.annotation.SuppressLint
-import android.content.SharedPreferences
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -19,7 +18,6 @@ import com.example.azimutlab.widgets.BannerView
 import com.example.azimutlab.widgets.CurrencyView
 import com.example.azimutlab.widgets_taiyr.CardCustomSber
 import kotlinx.android.synthetic.main.activity_main.*
-import org.koin.android.ext.android.inject
 import org.koin.android.viewmodel.ext.android.viewModel
 
 class MainActivity : AppCompatActivity(), LifecycleOwner {
@@ -66,11 +64,9 @@ class MainActivity : AppCompatActivity(), LifecycleOwner {
         currencyState.isMultiCurrency = true
         currencyState.currencyType = "〒"
 
-        bannerView.bannerDescription = "До 1 200 000 ₽\u2028на любые цели"
+        bannerView.bannerDescription = "До 1 200 000 ₽ на любые цели"
         bannerView.bannerTitle = "Кредит"
-        bannerView.imagePath = "https://cis.visa.com/dam/VCOM/regional/ap/taiwan/global-elements/images/tw-visa-gold-card-498x280.png"
-
-
+        bannerView.bannerImagePath = "https://cis.visa.com/dam/VCOM/regional/ap/taiwan/global-elements/images/tw-visa-gold-card-498x280.png"
     }
 
     override fun onPause() {

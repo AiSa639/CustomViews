@@ -9,7 +9,7 @@
     </declare-styleable>
 
     <declare-styleable name="BannerView">
-        <attr name="imagePath" format="string"/>
+        <attr name="bannerImagePath" format="string"/>
         <attr name="bannerTitle" format="string"/>
         <attr name="bannerDescription" format="string"/>
     </declare-styleable>
